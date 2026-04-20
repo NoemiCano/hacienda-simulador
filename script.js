@@ -11,14 +11,16 @@ btnCalcular.addEventListener("click", function () {
 
     if (brutoAnual > 30000) {
         retencion = 20;
+        document.getElementById("resultado").style.color = "red";
     } else{
         retencion = 15;
+        document.getElementById("resultado").style.color = "green";
     }
 
     let netoAnual = brutoAnual - (brutoAnual * (retencion / 100));
     let netoMensual = netoAnual / 12;
 
-    montoNeto.textContent = netoMensual.toFixed(2); // .toFixed(2) para que solo tenga 2 decimales
+    montoNeto.textContent = netoMensual.toFixed(2);
     porcentaje.textContent = retencion;
 
 
